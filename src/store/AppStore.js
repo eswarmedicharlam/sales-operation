@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import CropReducer from "./CropSlice";
 import UserDataReducer from "./UserDataSlice";
+import ModalReducer from "./ModalSlice";
 import storage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";
 import { combineReducers } from "redux";
@@ -21,6 +22,7 @@ const persistedUserDataReducer = persistReducer(userPersistConfig, UserDataReduc
 const rootReducer = combineReducers({
   Crop: persistedCropReducer,
   UserData: persistedUserDataReducer,
+  Modal: ModalReducer,
 });
 
 

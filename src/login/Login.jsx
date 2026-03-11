@@ -3,6 +3,8 @@ import loginBg from '../assets/images/loginBg.png'
 import LoginLogo from '../assets/images/LoginLogo.png'
 import eyeIcon from '../assets/images/eyeIcon.png'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { loginData } from '../store/UserDataSlice'
 
 export const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' })
@@ -10,6 +12,7 @@ export const Login = () => {
   const [showPassword, setShowPassword] = useState(false)
   const [rememberMe, setRememberMe] = useState(false)
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const validate = () => {
     const newErrors = {}
@@ -35,14 +38,16 @@ export const Login = () => {
   }
 
   const handleSubmit = (e) => {
-    navigate('/dashboard')
     // e.preventDefault()
     // const validationErrors = validate()
     // if (Object.keys(validationErrors).length > 0) {
     //   setErrors(validationErrors)
     //   return
-    // } 
-    // console.log('Login submitted', formData, 'Remember me:', rememberMe)
+    // }
+    // Dispatch login data to Redux
+    dispatch(loginData({ email: formData.email, rememberMe }))
+    // Navigate to dashboard
+    navigate('/dashboard')
   }
 
   return (
