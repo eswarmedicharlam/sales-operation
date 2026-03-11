@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import saleLogo from "../assets/images/salesoperation-logo.png";
 import dashboardIcon from "../assets/images/sidebar-icons/dashboard-icon.png";
 import empManageIcon from "../assets/images/sidebar-icons/emp-manage-icon.png";
+import activityPlottingIcon from "../assets/images/sidebar-icons/activity-plotting.png";
 import logoutIcon from "../assets/images/logout-icon.png";
 import { useModal } from "../hooks/useModal";
 import { useDispatch } from "react-redux";
@@ -12,13 +13,12 @@ import { logoutUser } from "../store/UserDataSlice";
 const menuItems = [
   { id: 1, label: "Dashboard", path: "/dashboard", icon: dashboardIcon },
   { id: 2, label: "Employee Management", path: "/employee-management", icon: empManageIcon },
-  { id: 3, label: "Activity Plotting", path: "/activity-ploting", icon: empManageIcon },
+  { id: 3, label: "Activity Plotting", path: "/activity-ploting", icon: activityPlottingIcon },
 //   { id: 3, label: "Logout", path: null, isLogout: true }
 ];
 
 const SideBar = ({ isOpen, handleSidebar }) => {
   const navigate = useNavigate();
-  const [showLogoutModal, setShowLogoutModal] = useState(false);
   const [selectedMenuId, setSelectedMenuId] = useState(1);
   const { showModal } = useModal();
   const dispatch = useDispatch();
