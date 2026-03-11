@@ -1,0 +1,151 @@
+/* PrimeReact-specific overrides */
+.custom-table {
+  border-radius: 15px;
+  overflow-x: auto;
+  padding: 10px;
+  /* Ensure child elements respect the border radius */
+}
+
+.border-gray-200 {
+  border: none !important;
+}
+
+.p-paginator-custom {
+  display: flex;
+  justify-content: flex-end;
+  /* Align pagination to the right */
+  padding: 8px 16px;
+  background: #ffffff;
+}
+
+.p-column-header-content {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.p-paginator-custom .p-paginator-prev,
+.p-paginator-custom .p-paginator-next {
+  padding: 4px 12px;
+  margin: 0 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.p-paginator-custom .p-paginator-prev.p-disabled,
+.p-paginator-custom .p-paginator-next.p-disabled {
+  opacity: 0.5;
+}
+
+.p-paginator-custom .p-paginator-pages .p-paginator-page {
+  padding: 4px 12px;
+  margin: 0 4px;
+  font-size: 12px !important;
+  font-weight: 500;
+  color: #374151;
+  /* border: 1px solid #d1d5db; */
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.p-paginator-custom .p-paginator-prev,
+.p-paginator-custom .p-paginator-next {
+  font-size: 12px !important;
+}
+
+.p-paginator-custom .p-paginator-pages .p-paginator-page.p-highlight {
+  background: #005B30;
+  color: #ffffff;
+  border-color: #005B30;
+}
+
+.p-sortable-column {
+  cursor: pointer;
+}
+
+.p-sortable-column .p-column-header-content {
+  display: flex;
+  align-items: center;
+}
+
+.p-sortable-column .p-sortable-column-icon {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.p-sortable-column .p-sortable-column-icon.pi-sort-alt {
+  color: #6b7280;
+  /* Default (unsorted) state */
+}
+
+.p-sortable-column .p-sortable-column-icon.pi-sort-amount-up {
+  color: #00455c;
+  /* Ascending state */
+}
+
+.p-sortable-column .p-sortable-column-icon.pi-sort-amount-down {
+  color: #00455c;
+  /* Descending state */
+}
+
+.p-sortable-column:not(.p-highlight):hover .p-sortable-column-icon {
+  color: #374151;
+  /* Hover state for unsorted columns */
+}
+
+/* Add vertical lines between columns */
+.custom-table .p-datatable-thead>tr>th {
+  /* border-right: 2px solid #e0e0ee;     */
+  border-right: none;
+}
+
+.custom-table .p-datatable-tbody>tr>td {
+  /* border-right: 2px solid #e0e0ee;   */
+  border-right: none;
+}
+
+/* Remove the right border for the last column to avoid double border with the table's outer border */
+.custom-table .p-datatable-thead>tr>th:last-child,
+.custom-table .p-datatable-tbody>tr>td:last-child {
+  border-right: none;
+}
+
+/* Remove the left border for the first column to avoid double border with the table's outer border */
+.custom-table .p-datatable-thead>tr>th:first-child,
+.custom-table .p-datatable-tbody>tr>td:first-child {
+  border-left: none;
+}
+
+.p-paginator-bottom {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page {
+  height: 24px !important;
+  min-width: 20px !important;
+}
+
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-prev,
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-last {
+  height: 24px !important;
+  min-width: none !important;
+  width: 40px !important;
+}
+
+.p-input-icon-left>i,
+.p-input-icon-right>i,
+.p-input-icon-left>svg,
+.p-input-icon-right>svg,
+.p-input-icon-left>.p-input-prefix,
+.p-input-icon-right>.p-input-suffix {
+  margin-top: -0.5rem !important;
+}

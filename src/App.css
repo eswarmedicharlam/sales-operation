@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap');
+body {
+  background-color: #f5f9f7;
+}
+
+
+/* .inter-font {
+  font-family: "Inter" ;
+}
+
+.poppins-font {
+  font-family: "Poppins";
+} */
+
+.dropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("./assets/DropDown.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 16px;
+
+}
+
+.loader {
+  background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.p-dropdown:focus,
+.p-dropdown.p-focus {
+  box-shadow: none !important;
+}
+
+.p-dropdown {
+  border-radius: 10px !important;
+}
+
+.p-icon {
+  width: 1rem;
+  height: 0.8rem !important;
+}
+
+.chart-container {
+  max-width: 100%;
+}
+
+/* dropdown css */
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item:not(.p-highlight):not(.p-disabled).p-focus {
+  background: #005B300D !important;
+  color: #404040;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  background: #005B300D !important;
+  color: #404040;
+}
