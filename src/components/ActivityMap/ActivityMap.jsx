@@ -46,7 +46,8 @@ const ActivityMap = ({ data }) => {
 
     return (
         <div className="bg-white rounded-[15px] overflow-hidden p-6">
-            <LoadScript googleMapsApiKey={import.meta.env.GOOGLE_MAP_KEY}>
+            <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAP_KEY}>
+            {/* <LoadScript googleMapsApiKey={"AIzaSyDSnvnrNEsJaOdNyzcOkLfjomZ8WVLiajw"}> */}
                 <GoogleMap
                     mapContainerStyle={mapContainerStyle}
                     center={getMapCenter()}
